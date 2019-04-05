@@ -27,3 +27,11 @@ if (evt.keyCode == 27){
 	formSearch.classList.add("js-form-close");//добавляем класс закрытия формы
 };
 });
+
+//блок закрытия формы при нажатии мимо
+document.addEventListener('click', function(evt) {
+	if (evt.target.id != "search-form" && evt.target.id != "search-button-call") {
+		formSearch.classList.remove("js-form-show");//убираем класс открытия формы
+		formSearch.classList.add("js-form-close");//добавляем класс закрытия формы
+	}
+});
